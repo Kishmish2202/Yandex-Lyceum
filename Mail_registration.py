@@ -1,0 +1,8 @@
+parol = input()
+rezerv = input()
+if '@' in parol:
+    print('Некорректный логин')
+elif '@' not in rezerv:
+    print('Некорректный адрес')
+else:
+    print('OK')
