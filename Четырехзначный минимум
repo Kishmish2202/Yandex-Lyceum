@@ -1,0 +1,27 @@
+a = int(input())
+a1 = int(a) // 1000
+a2 = int(a) // 100 - (int(a) // 1000 * 10)
+a3 = int(a) // 10 - (int(a) // 100 * 10)
+a4 = int(a) - (int(a) // 10 * 10)
+
+if a1 > a4:
+    a1, a4 = a4, a1
+if a1 > a2:
+    a1, a2 = a2, a1
+if a2 > a3:
+    a2, a3 = a3, a2
+if a1 > a2:
+    a1, a2 = a2, a1
+if a3 > a4:
+    a3, a4 = a4, a3
+if a2 > a3:
+    a2, a3 = a3, a2
+    
+if a1 == 0:
+    a1, a2 = a2, a1
+if (a1 == 0 and a2 == 0):
+    a1, a2, a3 = a3, a2, a1
+if (a1 == 0 and a2 == 0 and a3 == 0):
+    a1, a2, a3, a4 = a4, a3, a2, a1
+    
+print(str(a1) + str(a2) + str(a3) + str(a4))
